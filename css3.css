@@ -1,0 +1,203 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Fira Code';
+    box-sizing: border-box;
+}
+
+@keyframes opacity{
+    0%{
+        opacity: 0;
+        visibility: hidden;
+    }
+    100% {
+        opacity: 1;
+        visibility: visible;
+    }}
+
+@keyframes typing {
+        from { width: 0; }
+        to { width: 100%; }
+    }
+    
+@keyframes blinkCursor {
+        0%  { opacity: 1; }
+        50% { opacity: 1; }
+        100% { opacity: 0; } 
+    } 
+
+body {
+    background: #1e1e1e;
+    color: #fff;
+    overflow: hidden;
+}
+
+.largetxt {
+    animation: opacity ease forwards 4s;
+    font-size: 2.6rem;
+    color: #fff;
+    margin-top: 20rem;
+    margin-left: 16.5rem;
+    position: absolute;
+}
+
+
+.login{
+    font-size: 0.83rem;
+    margin-left: 12.5rem;
+    margin-top: 4rem;
+    opacity: 0;
+    animation: opacity 2s ease forwards;
+    color:#c59c22;
+    position: absolute; 
+}
+
+.navbar{
+    width: 5rem;
+    height: 100vh;
+    position: absolute;
+    background-color: #181818;
+    transition: width 500ms ease;
+}
+.navbar-nav{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display:flex;
+    flex-direction: column;
+    margin-left: 1.5vh;
+    height: 100%;
+}
+
+.nav-item:first-child {
+    font-size: 4rem;
+    color:#d7b94c;
+    margin-top: 35vh;
+}
+
+.nav-item:last-child{
+    margin-top: 18rem;
+}
+.nav-link{
+    font-size: 1.125rem;
+    display: flex;
+    align-items: center;
+    height: 4rem;
+    text-decoration: none;
+    color:#b3b1b1;
+}
+.link-text{
+    display: block;
+    opacity: 0;
+    margin-left: 2.5rem;
+    text-decoration: none;
+    color:#b3b1b1;
+    font-size: 0.95rem;
+}
+
+.navbar:hover{
+    width: 12rem;
+}
+.navbar:hover .link-text {
+    opacity: 1;
+    transition: opacity 2000ms 0s;
+}
+
+.nav-link:hover{
+    filter: grayscale(0%) opacity(1);
+    background: #353232;
+    color:#FFC000;
+}
+
+.logo-link {
+    color: #FFC000; 
+    text-decoration: none;
+    font-size: 1.75rem;
+    margin-left: 2rem;
+    transition: margin-left 500ms ease;
+}
+
+.navbar:hover .logo-link{
+    margin-left: 5rem;
+    
+}
+
+
+
+.paragraph {
+    animation: opacity ease forwards 4s;
+    animation-delay: 2s;
+    position: absolute;
+    font-size: 0.7rem;
+    margin-left: 16.5rem;
+    margin-top: 26rem;
+    color :darkorange;
+    opacity: 0;
+}
+
+
+.trans-links{
+    animation: opacity ease forwards 4s;
+    animation-delay: 2s;
+    opacity: 0;
+}
+
+.github{
+    position: absolute;
+    margin-left: 8rem;
+    margin-top: 20rem;
+    font-size: 3.5rem;
+    display: flex;
+    align-items: center;
+    height: 4rem;
+    text-decoration: none;
+    color:#b3b1b1;
+    background-color: #181818;
+    border-radius: 50%;
+}
+
+.github:hover{
+    filter: grayscale(0%) opacity(1);
+    background: #353232;
+    color:#FFC000;
+}
+
+.linkedin{
+    position: absolute;
+    margin-left: 14rem;
+    margin-top: 20rem;
+    font-size: 3.5rem;
+    display: flex;
+    align-items: center;
+    height: 4rem;
+    text-decoration: none;
+    color:#b3b1b1;
+    background-color: #181818;
+    border-radius: 50%;
+}
+
+.linkedin:hover{
+    filter: grayscale(0%) opacity(1);
+    background: #353232;
+    color:#FFC000;
+}
+
+.email {
+    position: absolute;
+    margin-left: 20rem;
+    margin-top: 20rem;
+    font-size: 3.5rem;
+    display: flex;
+    align-items: center;
+    height: 4rem;
+    text-decoration: none;
+    color:#b3b1b1;
+    background-color: #181818;
+    border-radius: 50%;
+}
+
+.email:hover{
+    filter: grayscale(0%) opacity(1);
+    background: #353232;
+    color:#FFC000;
+}
