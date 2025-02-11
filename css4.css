@@ -1,3 +1,4 @@
+/* Global Styles */
 * {
     margin: 0;
     padding: 0;
@@ -5,57 +6,36 @@
     box-sizing: border-box;
 }
 
-@keyframes opacity{
-    0%{
-        opacity: 0;
-        visibility: hidden;
-    }
-    100% {
-        opacity: 1;
-        visibility: visible;
-    }}
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
 
-@keyframes typing {
-        from { width: 0; }
-        to { width: 100%; }
-    }
-    
-@keyframes blinkCursor {
-        0%  { opacity: 1; }
-        50% { opacity: 1; }
-        100% { opacity: 0; } 
-    } 
-
+/* Body Styles */
 body {
     background: #1e1e1e;
     color: #fff;
-    overflow: hidden;
+    /* Allow vertical scrolling but prevent horizontal overflow */
+    overflow-x: hidden;
 }
 
-
-
-.login{
-    font-size: 0.83rem;
-    margin-left: 12.5rem;
-    margin-top: 4rem;
-    opacity: 0;
-    animation: opacity 2s ease forwards;
-    color:#c59c22;
-    position: absolute; 
-}
-
-.navbar{
+/* Navbar Styles – using fixed positioning so it always spans the full viewport height */
+.navbar {
     width: 5rem;
-    height: 100vh;
-    position: absolute;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
     background-color: #181818;
     transition: width 500ms ease;
 }
-.navbar-nav{
+
+.navbar-nav {
     list-style: none;
     padding: 0;
     margin: 0;
-    display:flex;
+    display: flex;
     flex-direction: column;
     margin-left: 1.5vh;
     height: 100%;
@@ -63,92 +43,120 @@ body {
 
 .nav-item:first-child {
     font-size: 4rem;
-    color:#d7b94c;
+    color: #d7b94c;
     margin-top: 35vh;
 }
 
-.nav-item:last-child{
+.nav-item:last-child {
     margin-top: 18rem;
 }
-.nav-link{
+
+.nav-link {
     font-size: 1.125rem;
     display: flex;
     align-items: center;
     height: 4rem;
     text-decoration: none;
-    color:#b3b1b1;
+    color: #b3b1b1;
 }
-.link-text{
+
+.link-text {
     display: block;
     opacity: 0;
     margin-left: 2.5rem;
     text-decoration: none;
-    color:#b3b1b1;
+    color: #b3b1b1;
     font-size: 0.95rem;
 }
 
-.navbar:hover{
+.navbar:hover {
     width: 12rem;
 }
+
 .navbar:hover .link-text {
     opacity: 1;
     transition: opacity 2000ms 0s;
 }
 
-.nav-link:hover{
+.nav-link:hover {
     filter: grayscale(0%) opacity(1);
     background: #353232;
-    color:#FFC000;
+    color: #FFC000;
 }
 
 .logo-link {
-    color: #FFC000; 
+    color: #FFC000;
     text-decoration: none;
     font-size: 1.75rem;
     margin-left: 2rem;
     transition: margin-left 500ms ease;
 }
 
-.navbar:hover .logo-link{
+.navbar:hover .logo-link {
     margin-left: 5rem;
-    
 }
 
+/* Content Container */
+.content {
+    margin-left: 16.5rem;  /* Leaves space for the fixed navbar */
+    margin-top: 13rem;
+    padding: 1rem 2rem;
+}
 
+/* Fade-in Base for Text Elements */
+.title,
+.subtitle,
+.paragraph1,
+.login {
+    opacity: 0;
+    animation-fill-mode: forwards; /* Keep final state after animation */
+}
+
+/* Title Styles */
 .title {
-    animation: opacity ease forwards 4s;
     font-size: 2.6rem;
     color: #fff;
-    margin-top: 13rem;
-    margin-left: 16.5rem;
-    position: absolute;
+    margin-bottom: 2rem;
+    animation: fadeIn 1.5s ease forwards;
 }
 
-.subtitle{
-    animation: opacity ease forwards 4s;
-    animation-delay: 2s;
-    position: absolute;
+/* Each Project Section */
+.project {
+    margin-bottom: 3rem;
+}
+
+/* Subtitle Styles */
+.subtitle {
     font-size: 1.5rem;
-    margin-left: 16.5rem;
-    margin-top: 20rem;
-    color :darkorange;
-    opacity: 0;
+    color: darkorange;
+    margin-bottom: 0.5rem;
+    animation: fadeIn 1.5s ease forwards;
+    animation-delay: 1s;
 }
 
+/* Paragraph Styles */
 .paragraph1 {
-    animation: opacity ease forwards 4s;
-    animation-delay: 2s;
-    position: absolute;
-    font-size: 0.7rem;
-    margin-left: 16.5rem;
-    margin-top: 23rem;
-    color : #fff;
-    opacity: 0;
+    font-size: 0.9rem;
+    color: #fff;
+    margin-bottom: 2rem;
+    line-height: 1.5;
+    animation: fadeIn 1.5s ease forwards;
+    animation-delay: 1.2s;
 }
 
+/* Login Section */
+.login {
+    font-size: 0.83rem;
+    margin-left: 12.5rem;
+    margin-top: 4rem;
+    color: #c59c22;
+    position: absolute;
+    animation: fadeIn 1.5s ease forwards;
+    animation-delay: 2s;
+}
+
+/* Image Styles */
 img[src="stockticker.gif"] {
     margin-top: 3rem;
-    width: 50rem; 
-    
+    width: 50rem;
 }
-
